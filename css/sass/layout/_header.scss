@@ -1,0 +1,91 @@
+@use "../variable" as var;
+@use "../base";
+
+
+nav {
+    display: flex;
+    padding-top: 20px;
+    .logo {
+        margin-top: 12px;
+    }
+    ul {
+        margin-left: auto;
+        list-style: none;
+        display: flex;
+        margin-top: 32px;
+        li {
+            margin-left: 32px;
+            a {
+                text-decoration: none;
+                color: #000;
+                text-transform: capitalize;
+                &:hover {
+                    color: var.$main_color;
+                }
+            }
+        }
+    }
+    button {
+        margin-left: 56px;
+        width: 160px;
+        height: 40px;
+        margin-top: 26px;
+        border: none;
+        background-color: var.$hea_btn_color;
+        color: #fff;
+        border-radius: 8px;
+        text-transform: capitalize;
+        font-size: 16px;
+        cursor: pointer;
+        &:hover {
+            background: var.$light_blue;
+        }
+    }
+}
+
+header {
+    display: flex;
+    margin-top: 64px;
+    div:first-child {
+        width: 35%;
+        margin-left: 68px;
+    }
+    div:last-child {
+        width: 50%;
+        margin-left: auto;
+    }
+    h1 {
+        font-size: 48px;
+        font-weight: normal;
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+    p {
+        font-size: 18px;
+        padding: 24px 0px;
+        line-height: 1.6;
+    }
+    button {
+        padding: 15px 32px;
+        font-size: 20px;
+        text-transform: capitalize;
+        border: none;
+        border-radius: 8px;
+        color: #fff;
+        background: rgb(86,83,163);
+        background: linear-gradient(90deg, rgba(86,83,163,1) 0%, rgba(61,166,198,1) 100%);
+        cursor: pointer;
+        &:hover {
+            background: var.$light_blue;
+        }
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
