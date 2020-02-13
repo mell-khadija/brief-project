@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-  width: 1400px;
+  max-width: 1400px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0px auto;
@@ -29,15 +29,35 @@ body {
 nav {
   display: flex;
   padding-top: 20px;
+  position: relative;
+}
+nav .menu {
+  width: 50px;
+  padding: 3px;
+  height: 50px;
+  background: #fff;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+@media (min-width: 993px) {
+  nav .menu {
+    display: none;
+  }
 }
 nav .logo {
-  margin-top: 12px;
+  margin-top: 20px;
 }
 nav ul {
   margin-left: auto;
   list-style: none;
   display: flex;
   margin-top: 32px;
+}
+@media (max-width: 992px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
 }
 nav ul li {
   margin-left: 32px;
@@ -50,7 +70,7 @@ nav ul li a {
 nav ul li a:hover {
   color: #5067b3;
 }
-nav button {
+nav .header--nav {
   margin-left: 56px;
   width: 160px;
   height: 40px;
@@ -63,26 +83,40 @@ nav button {
   font-size: 16px;
   cursor: pointer;
 }
-nav button:hover {
+@media (max-width: 992px) {
+  nav .header--nav {
+    margin-left: auto;
+  }
+}
+nav .header--nav:hover {
   background: #3da6c6;
 }
 
 header {
   display: flex;
   margin-top: 64px;
+  flex-wrap: wrap;
 }
 header div:first-child {
   width: 35%;
   margin-left: 68px;
 }
+@media (max-width: 992px) {
+  header div:first-child {
+    width: 100%;
+    margin-left: 0px;
+    text-align: center;
+  }
+}
 header div:last-child {
   width: 50%;
   margin-left: auto;
 }
-header div:last-child img {
-  width: 100%;
-  height: 100%;
-  margin-left: -6px;
+@media (max-width: 992px) {
+  header div:last-child {
+    width: 100%;
+    margin-left: 0px;
+  }
 }
 header h1 {
   font-size: 48px;
@@ -96,6 +130,11 @@ header p {
   padding: 24px 0px;
   line-height: 1.6;
 }
+@media (max-width: 992px) {
+  header p {
+    padding: 20px;
+  }
+}
 header button {
   padding: 15px 32px;
   font-size: 20px;
@@ -104,11 +143,37 @@ header button {
   border-radius: 8px;
   color: #fff;
   background: #5653a3;
+  margin-bottom: 20px;
   background: linear-gradient(90deg, #5653a3 0%, #3da6c6 100%);
   cursor: pointer;
 }
 header button:hover {
   background: #3da6c6;
+}
+header .overlay {
+  width: 100%;
+  height: 200%;
+}
+header .overlay #video {
+  object-fit: fill;
+  height: 550px;
+}
+
+.show {
+  display: block;
+  background-color: black;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 200px;
+  height: 150px;
+}
+.show li a {
+  color: #fff;
+}
+
+.hideMenu {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
