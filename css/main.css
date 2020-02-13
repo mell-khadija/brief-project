@@ -1,4 +1,4 @@
-@use "../variable";
+/* @use "../variable"; */
 * {
   margin: 0;
   padding: 0;
@@ -285,3 +285,18 @@ header .overlay #video {
 }
 
 /*# sourceMappingURL=main.css.map */
+  /* width: 1175px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0px auto; } */
+
+#sec2 {
+  background-color: #e8eaef; }
+  #sec2 .s2 {
+    text-align: center;
+    padding-top: 20px; }
+  #sec2 .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
