@@ -31,6 +31,13 @@ nav {
   padding-top: 20px;
   position: relative;
 }
+@media (max-width: 992px) {
+  nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+}
 nav .menu {
   width: 50px;
   padding: 3px;
@@ -163,7 +170,7 @@ header .overlay #video {
   display: block;
   background-color: black;
   position: absolute;
-  top: 50px;
+  top: 55px;
   left: 0;
   width: 200px;
   height: 150px;
